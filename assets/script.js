@@ -1,6 +1,7 @@
 
 
 var saveButton = $('.saveBtn');
+var clearButton = $('.clearBtn')
 var currentdayEL = $('#currentDay');
 var textArea = $('textarea');
 var allHOURS = $('#hour-00, #hour-01, #hour-02, #hour-03,#hour-04, #hour-05, #hour-06, #hour-07, #hour-08, #hour-09,#hour-10, #hour-11, #hour-12, #hour-13, #hour-14, #hour-15, #hour-16, #hour-17, #hour-18, #hour-19, #hour-20, #hour-21, #hour-22, #hour-23');
@@ -43,7 +44,7 @@ saveButton.on("click", function( ){
 
 //////THIS FUNCTION WHEN THE PAGE LOADS/// IT LOOPS AND GRABS ALL CUURRENT STORED ITEMS AND ASSIGNS IT TO ITS CORRESPONDING TEXTBOX. 
 function displayStoredItems () { 
-    allHOURS.each(function(index,item){   
+    allHOURS.each(function(){   
       var storageKey = $(this).attr('id'); ///hour ID
       var textBox = $(this).children('.description'); ///grabbing textbox
       
@@ -55,6 +56,16 @@ function displayStoredItems () {
     
   
 displayStoredItems();
+
+clearButton.on("click", function() {
+  localStorage.clear()
+
+  allHOURS.each(function() {
+    var textBox = $(this).children('.description')
+    textBox.val("")
+  })
+   
+})
  
  
 
