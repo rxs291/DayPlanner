@@ -57,3 +57,22 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.clearBtnRow{
+  display: flex;
+  justify-content: center;
+} 
+
+/* ////ADDED CLEAR BUTTON STYLINGS, GAVE IT THE I:HOVER FROM SAVE BTN  */
+
+.clearBtn { 
+  font-size: 15PX;
+  margin-bottom: 15px;
+}
+
+.clearBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  background-color: red;
+  color: white;
+}

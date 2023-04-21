@@ -53,10 +53,11 @@ function displayStoredItems () {
       textBox.val(displayHourContents) 
     })
   }
-    
-  
-displayStoredItems();
 
+
+
+  
+/////This ONCLICK function removes all saved local storage and loops through all text boxes and clearing them out. 
 clearButton.on("click", function() {
   localStorage.clear()
 
@@ -67,6 +68,14 @@ clearButton.on("click", function() {
    
 })
  
+
+
+
+
+
+////this function runs on page load to grab all saved local storage items and show them on screen
+displayStoredItems();
+
  
 
      
