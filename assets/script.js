@@ -12,9 +12,10 @@ currentdayEL.text(dayjs().format('MMM DD, YYYY'));
  
 /////THIS FUNCTION IS CALLED CONTINUOUSLY THROUGH A SETINTERVAL FUNCTION. THIS FUNCTION THEN PERMANTELY LOOPS TEH ALLHOURS VARIABLE THROUGH AN EACH FUNCTION. CONTSTANTLY COMPARING EACH HOUR ID THE CURRENT HOUR, THEN ADDING OR REMOVING CLASSES TO IT DEPENDING ON THE LOGIC.
 function backgroundColor() {
-  var rightNow = dayjs().format('hh');
+  var rightNow = dayjs().format('HH');
+
   allHOURS.each(function(){   
-    var eventHourElement = $(this).attr('id').slice(5,7);
+    var eventHourElement = $(this).attr('id').slice(5,7); 
 
     if (eventHourElement < rightNow) {
       $(this).removeClass('present');   
