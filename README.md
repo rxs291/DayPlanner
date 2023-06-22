@@ -1,6 +1,6 @@
 # DayPlanner 
 
-My starting poortfolio page. A little rough around the edges, but looking to be upgraded as time goes by and new challenges taken down.
+A dayplanner to help you keep track of the days events!
 
 ![FinalProduct](./assets/Capture.JPG)
 
